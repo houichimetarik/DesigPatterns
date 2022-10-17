@@ -1,27 +1,17 @@
-What is abstraction?!
-when you take something from a concrete dimension to an abstract dimension, you are trying to generalize
- it as much as you can, making it a concept that we can use in many other concrete things
- in your code, you can refer to all the concrete objects with one unified term: the name of the abstract concept
- Using the interface will end up with decoupling the code using it from all the concrete implementations of it
-What is inheritance?!
-is used to enrich a class with its superclass abilities
-it is also used to specialization, it is totally the contrary of the abstraction operation
+What is it all about?
+I have studied many design patterns and implemented some conceptual samples of them, to determine which of the design patterns we should use, we must first identify the design problem that we are dealing with, this information usually emerges from the problem itself, but to make it easy, I have enumerated a number of design problems already identified by prior software engineers, this way, we only need to match the problem at hand with them, once the design problem is matched I have provided the templates to implement the solution based on the pattern directly and also some of the consequences of the chosen design.
 
-Name: creational patterns
+What do we need to understand?
+Two concepts need to be understood before diving into the samples:
 
-Problem:
-Creational patterns are used to make the system independent of how objects are instantiated
-we use it when we have object compositions and small behaviors compositions
-when the creation of object requires more than a class instantiation
+Abstraction: taking a class from a concrete dimension to an abstract dimension, the operation of making it a concept that we can use in many other concrete talking and operations
+Inheritance: enrich a class with its superclass abilities it is also used for specialization: make the class different than its similar classes, specialization is totally contrary to the abstraction procedure in some 'sense'
+How this is organized?
+for every pattern, I have provided:
 
-solution:
-object delegate instantiation to an other object
-provide a global knowledge about what concrete classes are used by the system by using only interfaces
-hide how instances of these classes are used and arranged together
-
-Consequences:
-relieving the developer from going into details of how to initiate an object and construct it
- a lot of flexibility in what gets created, who creates it, how it gets created, and when.
-They let you configure a system with "product" objects that vary widely in structure
-and functionality. Configuration can be static (that is, specified at compile-time) or
-dynamic (at run-time)
+Its name
+Its type
+Problem(s) that is it solving
+solutions to those problems
+Consequences of such design
+Conceptual samples to implement it
