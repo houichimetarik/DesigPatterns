@@ -1,0 +1,27 @@
+What is abstraction?!
+when you take something from a concrete dimension to an abstract dimension, you are trying to generalize
+ it as much as you can, making it a concept that we can use in many other concrete things
+ in your code, you can refer to all the concrete objects with one unified term: the name of the abstract concept
+
+What is inheritance?!
+is used to enrich a class with its superclass abilities
+it is also used to specialization, it is totally the contrary of the abstraction operation
+
+Name: creational patterns
+
+Problem:
+Creational patterns are used to make the system independent of how objects are instantiated
+we use it when we have object compositions and small behaviors compositions
+when the creation of object requires more than a class instantiation
+
+solution:
+object delegate instantiation to an other object
+provide a global knowledge about what concrete classes are used by the system by using only interfaces
+hide how instances of these classes are used and arranged together
+
+Consequences:
+relieving the developer from going into details of how to initiate an object and construct it
+ a lot of flexibility in what gets created, who creates it, how it gets created, and when.
+They let you configure a system with "product" objects that vary widely in structure
+and functionality. Configuration can be static (that is, specified at compile-time) or
+dynamic (at run-time)
