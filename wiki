@@ -2,7 +2,7 @@ What is abstraction?!
 when you take something from a concrete dimension to an abstract dimension, you are trying to generalize
  it as much as you can, making it a concept that we can use in many other concrete things
  in your code, you can refer to all the concrete objects with one unified term: the name of the abstract concept
-
+ Using the interface will end up with decoupling the code using it from all the concrete implementations of it
 What is inheritance?!
 is used to enrich a class with its superclass abilities
 it is also used to specialization, it is totally the contrary of the abstraction operation
