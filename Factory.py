@@ -1,11 +1,11 @@
 """
 Name: Factory, type: creational
 Problem:
--  We provide the client with the possibility of creating a class but we can't anticipate which class he would create
--  We want to relive the final user from the task of managing multiple inheritance and interfaces during creating complex
+-  We provide the client with the possibility of creating an object using a class, the class itself does not know how to create the object
+-  We want to alleviate the final user from the task of managing multiple inheritance and interfaces during creating complex
    objects.
--  We have created a library with complex classes and classes relationship, we want to simplify the objects creation
-   operations.
+-  We have created a library with complex classes and classes relationships,However, we want to simplify the objects creation
+   as much as possible.
 solution:
 -  one solution is to provide the client with a mechanism (static method) to choose which object he wants to create,
    then handle the object creation using the superclasses and interfaces
@@ -14,7 +14,7 @@ Consequences:
 -  Simplicity with object creation
 -  Low coupling between user code and the library: when something changes in the library code the client does not have
    to change his code
--  only the library can decide how to construct the object, the client has only to call a factory method
+-  only the library can decide how to construct the object, the client has only to call the factory method
 """
 
 """implementation 
