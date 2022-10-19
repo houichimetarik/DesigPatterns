@@ -41,7 +41,7 @@ class Cat(Animal):
 
 class Lion(Animal):
     def declare_who_you_are(self):
-        print("I am a Cat")
+        print("I am a Lion")
 
 
 animals = {
