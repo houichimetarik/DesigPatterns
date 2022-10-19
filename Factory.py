@@ -2,7 +2,7 @@
 Name: Factory, type: creational
 Problem:
 -  We provide the client with the possibility of creating a class but we can't anticipate which class he would create
--  We want to relive the final user from the task of managing multiple inheritance and interfaces during creating complex
+-  We want to alleviate the final user from the task of managing multiple inheritance and interfaces during creating complex
    objects.
 -  We have created a library with complex classes and classes relationship, we want to simplify the objects creation
    operations.
