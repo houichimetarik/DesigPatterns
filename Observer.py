@@ -1,24 +1,27 @@
 """
 Name: Observer, type: Behavioral
 Problem:
--  We need to make a change in one object but we need make changes on a number of other objects before, moreover, we don't
-   know how many objects we have to change
--  We need to notify a bunch of objects that a change was made but without making these objects tightly coupled
--  We need to dynamically change the objets receiving the notifications without changing the code of any of the objects7
+-  We need to make changes in one object but we also need to notify all of the other objects about
+   these changes, moreover, we don't know how many objects should be notified.
+-  We need to notify a bunch of objects that a change was made but without making these objects tightly coupled with the
+   client's code.
+-  We need to dynamically change the objets receiving the notifications without changing the code of any of the objects.
 solution:
-- Create a publisher object that publishes data ( notifications ) that might be consumed by other objets
-- provide each of the other objects with a mechanism to subscribe to the publisher object in order to receive the data (notifications)
-  Remarks:
-     - The publisher doesn’t know who you are and how you use the magazine, it just delivers it because r(loose coupling)
+- Create a publisher object that publishes data ( notifications ) that might be consumed by the other objets.
+- provide each of the other objects with a mechanism to subscribe to the publisher object in order to receive
+  the data (notifications)
+- The publisher dose not have to know what objects are being notified, it just delivers data to them because they
+  were subscribed.
 Consequences:
--
+- Objects can be reused and updated flexibly, Observers remain the same (loose coupling).
+- This pattern provides support for broadcast communication in case we need it
 """
 
 """implementation 
 1- understand the subject template/interface
 2- understand the observer template/interface
-3- to better understand this concept we are going to implement the magazine-clients model: the magazine producer should notify
-all the magazine's subscribers that a new magazine has been release.
+3- to better understand this concept we are going to implement the magazine-clients model: the magazine producer should 
+notify all the magazine's subscribers that a new magazine has been release.
 """
 
 """Subject template"""
