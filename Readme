@@ -1,17 +1,1 @@
-What is it all about?
 I have studied many design patterns and implemented some conceptual samples of them, to determine which of the design patterns we should use, we must first identify the design problem that we are dealing with, this information usually emerges from the problem itself, but to make it easy, I have enumerated a number of design problems already identified by prior software engineers, this way, we only need to match the problem at hand with them, once the design problem is matched I have provided the templates to implement the solution based on the pattern directly and also some of the consequences of the chosen design.
-
-What do we need to understand?
-Two concepts need to be understood before diving into the samples:
-
-Abstraction: taking a class from a concrete dimension to an abstract dimension, the operation of making it a concept that we can use in many other concrete talking and operations
-Inheritance: enrich a class with its superclass abilities it is also used for specialization: make the class different than its similar classes, specialization is totally contrary to the abstraction procedure in some 'sense'
-How this is organized?
-for every pattern, I have provided:
-
-Its name
-Its type
-Problem(s) that is it solving
-solutions to those problems
-Consequences of such design
-Conceptual samples to implement it
