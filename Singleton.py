@@ -7,13 +7,13 @@ Problem:
 -  Global point access to writing log messages
 solution:
 -  create a global variable inside a module and import it whenever we need to use it
--  allow creation of only one instance of the class that represent our protected resource
--  In case that we want to use inheritance a shared state between instances should be addressed
+-  allow the creation of only one instance of the class that represents our protected resource
+-  In case we want to use inheritance, a shared state between instances should be addressed
 Consequences:
--  we have the same drawbacks as global variables
--  it violates the Single-responsibility principle
--  it is a subject to Code smells
--  it hides the dependencies the application's code, instead of exposing them through the interfaces
+-  we have the same drawbacks as global variables.
+-  it violates the Single-responsibility principle.
+-  it is a subject to Code smells.
+-  it hides the dependencies the application's code, instead of exposing them through the interfaces.
 """
 # create a global variable inside a module and import it whenever we need to use it
 import Singleton
