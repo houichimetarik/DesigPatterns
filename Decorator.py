@@ -2,28 +2,32 @@
 Name: Decorator, type: structural
 Problem:
 - We want to add an extended functionality to certain objects but without affecting the whole class: one way to do this
-  is by using inheritance but this will end up with every subclass having having the new functionality
+  is by using inheritance/subclassing but this will end up with every subclass having having the new functionality.
 - The required new functionality is not fundamental enough to dictate a significant design change like adding subclasses
 - The new functionality might be removed anytime soon, that's why it is better to use an other dynamic way to add it,
-  other than affecting the design permanently
+  other than affecting the design permanently.
 - once we have added the new functionality we might need to add an other one, in order not to start from the beginning
-  the extended objects need also to accept being extended by the same mechanism
+  the extended objects need also to accept being re-extended by the same mechanism
 solution:
 - The idea here is to create a new object that implement the same interface as the object we want to extend, so the new
   object can override the existing methods, note that this is not an inheritance.
 - but one problem here is that the new created object cannot override itself as required in the problem section, to address
   this problem, the new class that implements the common interface with the real object, should not be responsible for
   overriding the real objects, it should instead provide an interface to an other class that will be responsible for overriding
-  the real objects, in this way a new object can override itself since, it implement both the real object interface and the interface
+  the real objects, as a result of this, a new object can override itself since, it implement both the real object interface and the interface
   of the overrider itself
 Consequences:
--
+- More flexibility than a static inheritance
+- pay-as-you-go approach to modify the architecture, features are added only if we need them
+As drawbacks we could find:
+- a lot of little objects
 """
 
 import abc
+from abc import ABC
 
 
-class Component():
+class Component(ABC):
     """
     The common interface that should be implemented by both the real objects (that we want extend) and the new extended objects
     """
@@ -106,9 +110,9 @@ if __name__ == "__main__":
     client_code(simple)
     print("\n")
 
-    decorator1 = ConcreteDecoratorA(simple) # extend "simple" using the ConcreteDecoratorA
+    decorator1 = ConcreteDecoratorA(simple)  # extend "simple" using the ConcreteDecoratorA
     client_code(decorator1)
-    decorator2 = ConcreteDecoratorB(decorator1) # extend "decorator1" using the ConcreteDecoratorB
+    decorator2 = ConcreteDecoratorB(decorator1)  # extend "decorator1" using the ConcreteDecoratorB
     client_code(decorator2)
     # print("Client: Now I've got a decorated component:")
     # client_code(decorator2)
