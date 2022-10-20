@@ -81,11 +81,11 @@ class Component2(BaseComponent):
 
 
 class Mediator1(Mediator):
-    """the mediator take a number of components and uses itself to make them communicate"""
+    """the mediator take a number of components and uses itself to set the components mediators"""
 
     def __init__(self, component1, component2):
         self._component1 = component1
-        self._component1.mediator = self
+        self._component1.mediator = self  # uses itself to set the components mediators
         self._component2 = component2
         self._component2.mediator = self
 
@@ -101,7 +101,7 @@ class Mediator1(Mediator):
 
 
 if __name__ == "__main__":
-    # The client code.
+    # The client code, be careful at specifying events as it can go recursive
     c1 = Component1()
     c2 = Component2()
     mediator = Mediator1(c1, c2)
