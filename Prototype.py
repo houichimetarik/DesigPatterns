@@ -25,7 +25,7 @@ next, we implement our concrete classes, then the prototyping class (the prototy
 and use prototypes.
 """
 import abc
-import copy  # provide provide its own routine to copy an object
+import copy  # Python provides its own routine to copy an object
 
 
 class Shape(abc):
