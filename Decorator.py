@@ -23,7 +23,7 @@ Consequences:
 import abc
 
 
-class Component:
+class Component():
     """
     The common interface that should be implemented by both the real objects (that we want extend) and the new extended objects
     """
