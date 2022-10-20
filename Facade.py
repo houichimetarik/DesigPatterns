@@ -1,16 +1,18 @@
 """
 Name: Facade, Type: Structural
 Problem:
-- When the system has too many subclasses associated in a complex architectures and logic, we want to make it easier for the client to use them
+- When the system has too many subclasses associated in a complex architectures and logic, we want to make it easier
+  for the client to use them.
 - The client has to understand all the architecture of the subsystem before he can use it
-- Whenever a change is made to the architecture of the subclasses, all the client need to be notified
-- Whenever a change is made to the architecture of the subclasses, a change must be made in the way the client use the system
+- Whenever a change is made to the architecture of the subclasses, all the clients need to be notified
+- Whenever a change is made to the architecture of the subclasses, a change must be made in the way that the client
+  use the system.
 solution:
 - Provide a simple interface to use the complex architecture of the subsystem
 - decouple the complex subsystem's architecture from the client's code
 Consequences:
 - Only one point of entry is defined, thus, it is simpler for the client to communicate with the subsystem
-- A facade can provide a simple default view of the subsystem that is good enough for most clients
+- A facade can provide a simple default view of the subsystem that is good and easy enough for most clients.
 - decoupling the subsystem from clients and other subsystems, thus, promoting subsystem independence and portability.
 - The subsystem more reusable and easier to customize
 """
@@ -19,8 +21,8 @@ Consequences:
 1- we need to design a simple interface to the complex logic and architecture of all our subsystems
 2- the interface should be able to handle the client's requests then delegate the work to the appropriate elements
    of the subsystem
-3- Understand the Facade template   
-4- make sure that the client work with the complex subsystems through the simple interface
+3- Make sure that the client only need to understand the Facade template.   
+4- make sure that the client work with the complex subsystems through the simple interface.
 """
 
 """Facade template"""
