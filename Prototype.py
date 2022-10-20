@@ -95,13 +95,13 @@ class PrototypingClass:
     @staticmethod
     def get_a_prototype_clone(id):
         _shape = PrototypingClass.cache.get(id, None)
-        return _shape.clone() # here we use the interface method ( remember decoupling :) )
+        return _shape.clone()  # here we use the interface method ( remember decoupling :) )
 
     @staticmethod
-    def load():     # in this methode we create all the might needed prototypes for the client
+    def load():  # in this methode we create all the might needed prototypes for the client
         hexa = Hexagon()
-        hexa.set_id("1") # we give the prototype an id of 1
-        PrototypingClass.cache[hexa.get_id()] = hexa #we cache the protype with ID
+        hexa.set_id("1")  # we give the prototype an id of 1
+        PrototypingClass.cache[hexa.get_id()] = hexa  # we cache the protype with ID
 
         # the same for the pentagone
         Penta = Pentagon()
@@ -110,10 +110,10 @@ class PrototypingClass:
 
 
 if __name__ == '__main__':
-    PrototypingClass.load() # load the prototypes
+    PrototypingClass.load()  # load the prototypes
 
-    hexa = PrototypingClass.get_a_prototype_clone("1") #use the prototype dynamically
+    hexa = PrototypingClass.get_a_prototype_clone("1")  # use the prototype dynamically
     print(hexa.get_type())
 
-    Penta = PrototypingClass.get_a_prototype_clone("2") #use the prototype dynamically
+    Penta = PrototypingClass.get_a_prototype_clone("2")  # use the prototype dynamically
     print(Penta.get_type())
