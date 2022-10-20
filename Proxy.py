@@ -1,27 +1,29 @@
 """
 Name: Proxy, Type: Structural
 Problem:
--  We need to protect the access (creation or modification) to a certain object because of its high cost
--  we want to give the client the possibility of access certain behaviors/resources only if he really needs to ( example accessing a database )
--  we want make the implementation less heavy in term of execution by providing replacements of resource-intensive objects/behaviors.
+-  We need to protect the access (creation or modification) of a certain object because of its high cost
+-  we want to give the client the possibility of access certain behaviors/resources only if he "really" needs to,
+   for example, accessing a database.
+-  we want make the implementation less heavy in term of execution by providing replacements of resource-intensive
+   objects and behaviors.
 solution:
--  one solution is to use a certain object (proxy object) to manage the access and manipulation of our object of concern
--  encapsulate all the necessary logic in the proxy object
--  make the communication between the proxy object and the real object happens only if it is really needed
+-  one solution is to use a certain object (proxy object) to manage the access and manipulation of our object of concern.
+-  encapsulate all the necessary logic in the proxy object.
+-  make the communication between the proxy object and the real object happens only if it is "really" needed.
 Consequences:
 -  the implementation is generally faster
--  the real resources are protected & the communication more secure due to the proxy object interface
+-  the real resources are protected & the communication is more secure due to the proxy object interface.
 -  we can provide access to the real object based the user context ( OS, access rights...)
--  work also better when memory access is expensive
--  Without changing the client code, we can easily introduce the new proxies in our application
--  The proxy that we creates works even when the service object is not ready or is not available ( a database connection for example )
+-  it works also better when memory access is expensive or limited.
+-  Without changing the client code, we can easily introduce the new proxies in our application.
+-  The proxy that we create works even when the service object is not ready or is not available ( a database connection for example )
 """
 
 """implementation 
 we are going to protect the access to our database: in the following examples we only approve bank cards of type VISA to be associated
 with the client bank account
-1- we create an object that is responsible for finding and associate the client account with the card
-2- create a proxy object to handle the user request, then decide if the user really need to access the database
+1- we create an object that is responsible of finding and associate the client account with the card
+2- create a proxy object to handle the user request, then decide if the user "really" need to access the database.
 """
 
 
