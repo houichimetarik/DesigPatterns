@@ -1,11 +1,4 @@
 from abc import ABC, abstractmethod
-from pycallgraph2 import PyCallGraph
-from pycallgraph2.output import GraphvizOutput
-
-test = GraphvizOutput()
-test.output_file = "proxy_db2.json"
-test.output_type = 'json'
-
 
 
 
@@ -45,7 +38,6 @@ class Proxy:
 
 
 if __name__ == '__main__':
-    with PyCallGraph(output=test):
         SUBJECT = Proxy()
         # use SUBJECT
         print(id(SUBJECT))
