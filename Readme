@@ -1,5 +1,1 @@
-I have studied many design patterns and implemented some conceptual samples of them, to determine which of the design patterns we should use,
-we must first identify the design problem that we are dealing with, this information usually emerges from the problem itself,
-but to make it easy, I have enumerated a number of design problems already identified by prior software engineers, this way,
-we only need to match the problem at hand with them, once the design problem is matched I have provided the design pattern related
-to the matched problem and also some of the consequences of the proposed design, I have also provided the basic templates to implement the pattern in Python.
+The codebases utilized for generating the ground truth data. In order to evaluate the performance of the proposed BSS encoding and classifier, a total of 690 labeled design pattern implementations were collected from various GitHub repositories. These code samples were organized into three distinct repositories: DB1 and DB2 were designated for proof-of-concept validation and explanation, while DB3 was employed to test the classification process. It is important to note that some individual code files may encapsulate multiple design patterns.
